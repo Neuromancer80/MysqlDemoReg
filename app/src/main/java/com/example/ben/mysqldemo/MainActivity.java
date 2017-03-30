@@ -1,5 +1,6 @@
 package com.example.ben.mysqldemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,5 +22,9 @@ public void OnLogin(View view) {
     String type = "login";
     BackgroundWorker backgroundWorker = new BackgroundWorker(this);
     backgroundWorker.execute(type, username, password);
+}
+
+public void OpenReg(View view) {
+    startActivity(new Intent(this, Main2Activity.class));
 }
 }
